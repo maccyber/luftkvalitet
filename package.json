@@ -1,0 +1,47 @@
+{
+  "name": "luftkvalitet",
+  "version": "1.0.0",
+  "description": "Collect data from luftkvalitet.info API",
+  "license": "MIT",
+  "author": {
+    "name": "Jonas Enge",
+    "email": "jonas.enge@gmai.com",
+    "url": "https://maccyber.io"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.5.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "standard && nsp check && tap --reporter=spec test/*.js",
+    "coverage": "tap test/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls"
+  },
+  "keywords": [
+    "luftkvalitet",
+    "luftkvalitet.info"
+  ],
+  "standard": {
+    "ignore": [
+      "public"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/maccyber/luftkvalitet.git"
+  },
+  "bugs": {
+    "url": "http://github.com/maccyber/luftkvalitet/issues"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.14",
+    "nsp": "2.6.2",
+    "standard": "8.5.0",
+    "tap": "8.0.0"
+  },
+  "dependencies": {
+    "request": "2.76.0",
+    "xml2json": "0.10.0"
+  }
+}
